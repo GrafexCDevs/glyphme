@@ -1,5 +1,5 @@
 -debug
--lib hlsdl
+-lib hldx
 -lib heaps
 # -D glyphme.drawPack // used to debug the atlas
 -cp test

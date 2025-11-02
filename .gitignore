@@ -1,3 +1,11 @@
-out
-res
-.vscode
+/.haxelib/
+/out/
+
+/extension/*
+!/extension/.vs
+!/extension/glyphme.cpp
+!/extension/glyphme.sln
+!/extension/glyphme.vcxproj
+!/extension/glyphme.vcxproj.filters
+!/extension/glyphme.vcxproj.user
+!/extension/stb_truetype.h

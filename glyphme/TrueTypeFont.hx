@@ -1,5 +1,6 @@
 package glyphme;
 
+import hxd.Key;
 import h2d.Font;
 import h2d.Tile;
 import hxd.Pixels;
@@ -34,9 +35,19 @@ class TrueTypeFont extends h2d.Font {
 
 		super(null, sizeInPixels, h2d.Font.FontType.SignedDistanceField(Red, alphaCutOff, smoothing));
 
-		super.lineHeight = ascent - lineGap;
-		super.baseLine = ascent;
-		super.tile = @:privateAccess new Tile(null, 0, 0, 0, 0); // to avoid null access
+		this.lineHeight = sizeInPixels;
+		this.baseLine = ascent;
+		this.tile = @:privateAccess new Tile(null, 0, 0, 0, 0); // to avoid null access
+	}
+
+	private var __forceHasChar:Bool = false;
+
+	override function hasChar(code:Int):Bool {
+		if(code == Key.BACKSPACE) return false;
+		if(Key.isDown(Key.CTRL)) return false;
+		if (__forceHasChar)
+			return true;
+		return super.hasChar(code);
 	}
 
 	/** Fallbacks are used to look up glyphs from multiple fonts. When a glyph is not found
@@ -133,7 +144,7 @@ class TrueTypeFont extends h2d.Font {
 		pack.sort((c1, c2) -> c2.g.height - c1.g.height); // sorting tall to small
 
 		// row packing the glyphs and drawing to atlas
-		var atlas:Pixels;
+		var atlas:Pixels = null;
 		var brush = new Pixels(0, 0, null, RGBA);
 
 		// returns the number of glyphs this function call packed
@@ -292,7 +303,7 @@ class TrueTypeFont extends h2d.Font {
 
 	@:noCompletion
 	function drawPack(atlas:Pixels, x:Int, y:Int, w:Int, h:Int) {
-		final color = new h3d.Vector(1, 0, 0, 1).toColor();
+		final color = new h3d.Vector4(1, 0, 0, 1).toColor();
 		final thickness = 3;
 		for (t in 0...thickness) {
 			for (xl in 0...w)

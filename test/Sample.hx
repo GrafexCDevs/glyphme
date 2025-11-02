@@ -35,7 +35,7 @@ class Sample extends hxd.App {
 		// because dynamic glyph generation is not supported yet.
 		font.generateAtlas({fontHeightInPixels: 32}, [text.text]);
 
-		atlas = new h2d.Bitmap(font.tile, s2d);
+		// atlas = new h2d.Bitmap(font.tile, s2d);
 		hxd.Window.getInstance().addEventTarget(event -> text.scale(1 - event.wheelDelta * .1));
 	}
 
