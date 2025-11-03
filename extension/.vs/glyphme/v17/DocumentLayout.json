@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Coding\\Projects\\glyphme\\extension\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E99CA2AE-E95D-4F8E-A16A-3D72A9FEA065}|glyphme.vcxproj|D:\\Coding\\Projects\\glyphme\\extension\\stb_truetype.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E99CA2AE-E95D-4F8E-A16A-3D72A9FEA065}|glyphme.vcxproj|solutionrelative:stb_truetype.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "stb_truetype.h",
+              "DocumentMoniker": "D:\\Coding\\Projects\\glyphme\\extension\\stb_truetype.h",
+              "RelativeDocumentMoniker": "stb_truetype.h",
+              "ToolTip": "D:\\Coding\\Projects\\glyphme\\extension\\stb_truetype.h",
+              "RelativeToolTip": "stb_truetype.h",
+              "ViewState": "AgIAAMMCAAAAAAAAAAAqwNMCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-02T21:52:16.541Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
